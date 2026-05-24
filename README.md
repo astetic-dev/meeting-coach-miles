@@ -3,32 +3,14 @@
 # I'm Miles. Your Meeting Reflection Coach.
 
 <p align="center">
-  <a href="https://github.com/astetic-dev/meeting-coach-miles/raw/main/docs/miles_intro_1080p.mp4">
-    <img src="docs/miles_intro_poster.jpg" alt="Watch Miles introduce himself" width="720">
+  <a href="https://youtu.be/-vG36dYPMI8">
+    <img src="docs/miles_intro_poster.jpg" alt="Watch Miles introduce himself on YouTube" width="720">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/astetic-dev/meeting-coach-miles/raw/main/docs/miles_intro_1080p.mp4"><strong>Watch Miles introduce himself</strong></a> · <a href="./DEMO.md">See three full coaching sessions in the demo</a>
+  <a href="https://youtu.be/-vG36dYPMI8"><strong>Watch Miles introduce himself</strong></a> · <a href="./DEMO.md">See three full coaching sessions in the demo</a>
 </p>
-
-<!--
-  UPGRADE PATH — for an inline-playable video on the README (instead of click-to-open):
-
-  1. Push this repo to GitHub.
-  2. On GitHub: Issues → New Issue.
-  3. Drag https://github.com/astetic-dev/meeting-coach-miles/raw/main/docs/miles_intro_1080p.mp4 into the issue body and wait for the upload.
-  4. GitHub will replace it with markdown like:
-       ![miles_intro_1080p](https://github.com/user-attachments/assets/xxxxx-xxxxx.mp4)
-  5. Copy ONLY the URL (the https://... part).
-  6. Cancel/close the issue without posting.
-  7. In this README, REPLACE the two <p align="center"> blocks above with the bare URL
-     on its own line — GitHub will render it as an inline video player:
-
-       https://github.com/user-attachments/assets/xxxxx-xxxxx.mp4
-
-  The video file in docs/ can stay as a fallback for offline/clone use.
--->
 
 
 ---
