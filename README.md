@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="docs/miles_intro_1080p.mp4">
-    <img src="docs/miles-chat-preview.svg" alt="Watch Miles introduce himself" width="720">
+    <img src="docs/miles_intro_poster.jpg" alt="Watch Miles introduce himself" width="720">
   </a>
 </p>
 
