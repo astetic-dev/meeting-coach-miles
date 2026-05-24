@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "CONTACT-STOWLINE-jasmine-ali",
+  "name": "Jasmine Ali",
+  "organization": { "code": "STOWLINE", "name": "Stowline Software Ltd." },
+  "role": "Vendor Project Manager",
+  "party_default": "vendor",
+  "active": true,
+  "since": "2026-02-15",
+  "departed_at": null,
+  "involved_in": ["ACME-WMS"],
+  "behavioral_observations": [
+    {
+      "observation": "Re-introduces the Premium Analytics module every two to three weeks; will pivot framing (cost-saving / risk-reducing / sponsor-impressing) depending on audience.",
+      "first_observed": "2026-04-07",
+      "source_meeting_id": null
+    },
+    {
+      "observation": "Goes silent on integration-sprint slippage unless directly named.",
+      "first_observed": "2026-04-28",
+      "source_meeting_id": null
+    }
+  ],
+  "notes": "Vendor PM. Targets in her contract are tied to module-upsell as well as on-time delivery; the upsell push is structural, not personal.",
+  "tags": ["vendor-pm", "upsell-driver"]
+}

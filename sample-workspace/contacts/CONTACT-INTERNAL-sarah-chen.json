@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "CONTACT-INTERNAL-sarah-chen",
+  "name": "Sarah Chen",
+  "organization": { "code": "INTERNAL", "name": "(self — external consultant facilitating)" },
+  "role": "External Project Manager (facilitator on this engagement)",
+  "party_default": "internal",
+  "active": true,
+  "since": "2026-02-15",
+  "departed_at": null,
+  "involved_in": ["ACME-WMS"],
+  "behavioral_observations": [
+    {
+      "observation": "When the room moves toward discomfort late in a meeting, tends to offer a Friday deadline ('plan by next Friday', 'let me think about what that means for the steering on Friday') — the offer functions as a release-valve that closes the discomfort without resolving it.",
+      "first_observed": "2026-05-10",
+      "source_meeting_id": "MTG-ACME-WMS-2026-05-10-01"
+    },
+    {
+      "observation": "Under pressure from an unexpected internal-to-vendor alignment, defends the scope line by closing space for the internal voice rather than by holding both — observed once, worth watching.",
+      "first_observed": "2026-05-17",
+      "source_meeting_id": "MTG-ACME-WMS-2026-05-17-01"
+    }
+  ],
+  "notes": "The user's own contact-card. Kept so meeting-cards can reference the facilitator by id (consistent attendee handling) and so the user can read their own patterns over time without re-grepping meeting-cards.",
+  "tags": ["self", "facilitator"]
+}

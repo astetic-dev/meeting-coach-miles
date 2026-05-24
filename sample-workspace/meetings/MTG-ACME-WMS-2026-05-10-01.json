@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "MTG-ACME-WMS-2026-05-10-01",
+  "project_id": "ACME-WMS",
+  "title": "Steering — week 13 status & October 1 readiness",
+  "date": "2026-05-10",
+  "duration_minutes": 45,
+  "meeting_type": "steering",
+  "purpose": "Mid-execution status review with the sponsor. Surface the integration-sprint slippage and align on what October 1 readiness actually requires.",
+  "desired_outcome": "Sponsor acknowledges the risk to October 1 in writing and agrees to one decision for next steering (single-weekend cutover vs. phased).",
+  "attendees": [
+    { "contact_id": "CONTACT-INTERNAL-sarah-chen", "name": "Sarah Chen", "role": "facilitator", "party": "internal" },
+    { "contact_id": "CONTACT-ACME-mark-thompson", "name": "Mark Thompson", "role": "sponsor", "party": "customer" },
+    { "contact_id": "CONTACT-ACME-priya-natarajan", "name": "Priya Natarajan", "role": "customer PMO", "party": "customer" }
+  ],
+  "user_role": "facilitator",
+  "user_intent": "Get Mark to face the realistic October 1 risk in the room, without him deciding to escalate over my head or unilaterally compress the cutover.",
+  "user_self_assessment": "I think I oversold confidence in week 2 and Mark's reading of green there is still in the room today. I felt the meeting slip when I said 'we'll have a plan by next Friday' — that landed as a commitment, not as a step.",
+  "transcript_provided": true,
+  "transcript_excerpt": "MARK: 'So bottom line, are we still good for October 1?' SARAH: 'I want to be careful here — we have two sprints of slippage on Stowline's side that we have not made up. There is a path to October 1, but it requires the single-weekend cutover that you and David are not aligned on.' MARK: 'OK. Look, we'll figure it out. Let's just keep moving.'",
+  "analysis": {
+    "strengths": [
+      {
+        "moment": "Minute 12 — reframing of vendor delay as a planning problem",
+        "observation": "When Mark first asked 'why aren't they done', you reframed the vendor delay as a planning issue both sides own ('Stowline is two sprints behind, and our integration team is also waiting on three decisions from us'). That kept the conversation from collapsing into vendor-blaming.",
+        "skill": "reframing"
+      },
+      {
+        "moment": "Minute 28 — naming Priya's silence",
+        "observation": "You said 'Priya, you've been quiet — what are you not saying?' That is rare in a sponsor meeting and it created the only moment of new information in the whole conversation.",
+        "skill": "inviting dissent"
+      }
+    ],
+    "growth_points": [
+      {
+        "moment": "Minute 38 — the 'we'll figure it out' exchange",
+        "observation": "Mark said 'we'll figure it out, let's just keep moving' and the meeting moved on. The line that landed in his head was not the risk you named two minutes earlier — it was his own line.",
+        "reflection_prompt": "If you replay those 30 seconds, what would have made it impossible for the meeting to move on without a decision named?"
+      },
+      {
+        "moment": "Minute 41 — committing to 'a plan by next Friday'",
+        "observation": "You wrapped up by promising 'a plan by next Friday'. In your self-assessment you noticed that this landed as a commitment, not as a step.",
+        "reflection_prompt": "What were you protecting when you offered that? And what does Mark think you've committed to right now?"
+      },
+      {
+        "moment": "Whole meeting — the room you didn't build",
+        "observation": "David Okonkwo is in your risk register as the warehouse lead for Rotterdam and the only person who has lived through a failed rollout at Acme. He was not in this meeting.",
+        "reflection_prompt": "Whose absence shaped the conversation more — Mark's pressure, or David's silence?"
+      }
+    ],
+    "reflection_questions": [
+      "When Mark relaxed, what was supposed to be the signal that re-tensed the conversation?",
+      "You said 'I want to be careful here' before naming the risk — what does that phrase do to the weight of what comes after?",
+      "If next steering happens with the same three people, what changes?"
+    ],
+    "pattern_read": "You're doing the hardest part well — you can name a risk to the sponsor without softening it into nothing. The pattern to look at is what happens in the 90 seconds AFTER the risk lands. The risk gets named, then the meeting hands itself a release valve ('we'll figure it out'/'plan by Friday'), and the discomfort that was supposed to do the work dissipates. The coach in you is naming things. The facilitator in you is then giving the room a way out of holding them."
+  },
+  "user_reflections": [
+    {
+      "ts": "2026-05-10T17:22:00Z",
+      "text": "The 'we'll figure it out' beat is the one. I keep letting his closing energy be the closing energy. Next steering I want to be the one who says what we leave the room with.",
+      "responds_to": "growth_points[0]"
+    }
+  ],
+  "previous_meeting_card_id": null,
+  "created_at": "2026-05-10T17:15:00Z",
+  "status": "analyzed"
+}

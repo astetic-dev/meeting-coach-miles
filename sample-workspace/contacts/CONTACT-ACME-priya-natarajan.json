@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "CONTACT-ACME-priya-natarajan",
+  "name": "Priya Natarajan",
+  "organization": { "code": "ACME", "name": "Acme Logistics B.V." },
+  "role": "Customer PMO / day-to-day project lead",
+  "party_default": "customer",
+  "active": true,
+  "since": "2026-02-15",
+  "departed_at": null,
+  "involved_in": ["ACME-WMS"],
+  "behavioral_observations": [
+    {
+      "observation": "Quietly translates Mark's pressure into concrete asks for the team afterward — meetings often resolve in her DMs, not in the room.",
+      "first_observed": "2026-04-14",
+      "source_meeting_id": null
+    },
+    {
+      "observation": "Will surface risks via written status rather than challenge live, especially when Mark is in the room.",
+      "first_observed": "2026-05-10",
+      "source_meeting_id": "MTG-ACME-WMS-2026-05-10-01"
+    }
+  ],
+  "notes": "PMO. Strong written communicator. Important channel for things the room can't say aloud yet.",
+  "tags": ["approver", "translator"]
+}

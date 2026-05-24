@@ -1,0 +1,5 @@
+.claude/
+_design/
+*.local.json
+.DS_Store
+Thumbs.db

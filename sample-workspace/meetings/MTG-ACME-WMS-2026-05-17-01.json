@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "MTG-ACME-WMS-2026-05-17-01",
+  "project_id": "ACME-WMS",
+  "title": "Vendor sync — sprint review & Premium Analytics decision",
+  "date": "2026-05-17",
+  "duration_minutes": 30,
+  "meeting_type": "vendor-call",
+  "purpose": "Review the past week's integration sprint and close out the recurring Premium Analytics upsell conversation — Jasmine has raised it in each of the last three vendor syncs.",
+  "desired_outcome": "Clear no on Premium Analytics within scope of ACME-WMS; reset the next two-sprint plan.",
+  "attendees": [
+    { "contact_id": "CONTACT-INTERNAL-sarah-chen", "name": "Sarah Chen", "role": "facilitator", "party": "internal" },
+    { "contact_id": "CONTACT-STOWLINE-jasmine-ali", "name": "Jasmine Ali", "role": "vendor PM", "party": "vendor" },
+    { "contact_id": "CONTACT-ACME-david-okonkwo", "name": "David Okonkwo", "role": "warehouse manager (Rotterdam)", "party": "customer" }
+  ],
+  "user_role": "facilitator",
+  "user_intent": "Hold the line on no scope creep. Get a clean 'declined' on Premium Analytics in writing this week so it stops eating meeting time.",
+  "user_self_assessment": "I think I held the line, but I'm uneasy about the David moment — I cut him off when he started agreeing with Jasmine, and that was about me, not the meeting.",
+  "transcript_provided": true,
+  "transcript_excerpt": "SARAH: 'Jasmine, this is the third time you've raised Premium Analytics. I want to close it out today so we can stop bringing it back. The answer from our side is no for this engagement — it's in the out-of-scope list in the project plan.' JASMINE: 'OK, I hear you, but David — you mentioned last week that the floor team is worried about over-picking under the new system. Premium Analytics has the exception dashboard that —' DAVID: 'Yeah, actually I —' SARAH: 'David, hold on — Jasmine, this is exactly what I mean. We can talk about the over-picking concern as a Stowline-core feature request, but the conversation isn't whether Premium Analytics solves it.'",
+  "analysis": {
+    "strengths": [
+      {
+        "moment": "Opening 90 seconds — naming the pattern aloud",
+        "observation": "You said 'Jasmine, this is the third time you've raised Premium Analytics' and made the repetition itself part of the conversation. That is a hard move and you did it without making her the problem.",
+        "skill": "naming the pattern"
+      },
+      {
+        "moment": "Mid-meeting — separating the concern from the solution",
+        "observation": "You distinguished 'David's over-picking worry is real' from 'Premium Analytics is the way to address it'. That separation is the whole game on vendor upsells.",
+        "skill": "separating concern from proposal"
+      }
+    ],
+    "growth_points": [
+      {
+        "moment": "The David interruption",
+        "observation": "Jasmine pivoted to David's earlier comment and David started to respond. You stopped him before he finished a sentence and redirected to Jasmine. In your self-assessment you noticed that the stop was about your worry, not about the meeting.",
+        "reflection_prompt": "What did you think David was about to say? And what would it have meant for your line on scope if he'd finished the sentence?"
+      },
+      {
+        "moment": "The hand-off that didn't happen",
+        "observation": "After you stopped David, you went back to Jasmine. You didn't loop back to David at any point in the remaining 15 minutes. The first time he spoke in this meeting was also the last.",
+        "reflection_prompt": "When you replay it: at what point would you have re-opened space for him, and what stopped you in the moment from doing that?"
+      },
+      {
+        "moment": "Closing — Jasmine's 'OK, fair' and your 'talk next week'",
+        "observation": "You came into this meeting wanting a written 'declined' on Premium Analytics. The meeting ended with Jasmine saying 'OK, fair' and you closing the loop verbally.",
+        "reflection_prompt": "What did you read in Jasmine's 'OK, fair' that made the written confirmation feel unnecessary? And what does the answer tell you about what you trust about her — or about your own appetite to push twice in one meeting?"
+      }
+    ],
+    "reflection_questions": [
+      "David supported the vendor in the moment. What does that tell you about your stakeholder map for the next steering?",
+      "You held the scope line and you protected the scope line. Which one mattered more in this meeting?",
+      "Jasmine asked for a second extra week on the integration sprint and you said 'let me think about what that means for the steering on Friday' — what does that phrase do in the room, and does it do the same thing it did at the 05-10 steering when you said 'we'll have a plan by next Friday'?",
+      "If Jasmine raises Premium Analytics again next week, what is the cost of having held the line three times instead of two?"
+    ],
+    "pattern_read": "On vendor scope you are clear and fast. The growth edge in this meeting was internal — when an end-user (David) lined up unexpectedly with the vendor, you defended the line by removing the end-user from the room rather than by holding both. That move keeps the line intact in the short term and erodes the stakeholder relationship that lets the line hold next time. A second pattern showed up at the end: when Jasmine flagged a second extra week of slippage, you parked it with 'let me think about what that means for the steering on Friday' — the same release-valve move that closed out your sponsor steering the week before. The line you hold under pressure with vendors, you keep handing back to yourself with your own internal discomfort."
+  },
+  "user_reflections": [],
+  "previous_meeting_card_id": "MTG-ACME-WMS-2026-05-10-01",
+  "created_at": "2026-05-17T15:40:00Z",
+  "status": "analyzed"
+}

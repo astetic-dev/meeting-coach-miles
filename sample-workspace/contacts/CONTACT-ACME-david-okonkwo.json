@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "CONTACT-ACME-david-okonkwo",
+  "name": "David Okonkwo",
+  "organization": { "code": "ACME", "name": "Acme Logistics B.V." },
+  "role": "Warehouse Manager Rotterdam",
+  "party_default": "customer",
+  "active": true,
+  "since": "2026-02-22",
+  "departed_at": null,
+  "involved_in": ["ACME-WMS"],
+  "behavioral_observations": [
+    {
+      "observation": "Goes quiet when senior leadership pushes back on operational realism; will not repeat a concern twice if it lands flat the first time.",
+      "first_observed": "2026-03-15",
+      "source_meeting_id": null
+    },
+    {
+      "observation": "Open to vendor proposals that promise to reduce floor-staff load, even when those proposals expand scope.",
+      "first_observed": "2026-05-17",
+      "source_meeting_id": "MTG-ACME-WMS-2026-05-17-01"
+    }
+  ],
+  "notes": "End-user lead. The most credible voice on what will and won't work on the floor. Worth protecting his space in meetings.",
+  "tags": ["end-user-advocate", "rotterdam"]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "CONTACT-ACME-mark-thompson",
+  "name": "Mark Thompson",
+  "organization": { "code": "ACME", "name": "Acme Logistics B.V." },
+  "role": "Operations Director",
+  "party_default": "customer",
+  "active": true,
+  "since": "2026-02-15",
+  "departed_at": null,
+  "involved_in": ["ACME-WMS"],
+  "behavioral_observations": [
+    {
+      "observation": "Relaxes visibly once a date is named, even when the date is qualified with risks; treats qualified timeline statements as commitments in subsequent follow-ups.",
+      "first_observed": "2026-05-10",
+      "source_meeting_id": "MTG-ACME-WMS-2026-05-10-01"
+    },
+    {
+      "observation": "When timelines slip, defaults to 'just push harder' framing before asking what would actually help.",
+      "first_observed": "2026-04-21",
+      "source_meeting_id": null
+    }
+  ],
+  "notes": "Sponsor. Operates under peak-season pressure from CFO. Responds well to written follow-ups with explicit decision asks.",
+  "tags": ["sponsor", "decision-maker"]
+}

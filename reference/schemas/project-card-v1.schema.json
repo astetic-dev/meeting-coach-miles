@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meeting-coach.local/project-card/v1.json",
+  "title": "Project Card v1",
+  "description": "Project anchor: definition, purpose, scope, stakeholders, and current status. One per project folder as project.json. The coach reads this to ground every meeting analysis in the project's overarching goal — without a project card, the coach starts every session by collecting this information and then writes the card.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "purpose",
+    "scope_summary",
+    "status",
+    "customer",
+    "stakeholders"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Project-card schema version. v1 is the initial version (English, coach-scoped)."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z]{2,10}-[A-Z]{2,7}$",
+      "description": "Format: {customer_code}-{project_code}. No user prefix — the project card is a shared artifact. Examples: ACME-CLOUD, STOWLINE-ETL, NRTH-PORTAL."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Full human-readable project name."
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 10,
+      "description": "1-3 sentences: why are we doing this project? What does it solve? Hard non-empty — prevents empty metadata. The coach refers back to this when a meeting drifts from the project's reason for being."
+    },
+    "scope_summary": {
+      "type": "object",
+      "required": ["in_scope", "out_of_scope"],
+      "additionalProperties": false,
+      "properties": {
+        "in_scope": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "3-6 bullets: what falls within the project's scope."
+        },
+        "out_of_scope": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Bullets: what is explicitly out of scope. May be empty."
+        }
+      }
+    },
+    "success_criteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Measurable statements at the project level. Required once status is execution, golive, aftercare, or done."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["initiation", "execution", "golive", "aftercare", "done", "paused", "cancelled"],
+      "description": "Lifecycle phase. Drives the coach's prior on what facilitation challenges to expect (e.g., initiation meetings hinge on alignment; aftercare on accountability)."
+    },
+    "health": {
+      "type": ["object", "null"],
+      "required": ["level"],
+      "additionalProperties": false,
+      "properties": {
+        "level": { "type": "string", "enum": ["green", "yellow", "red"] },
+        "since": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Since when has the project been at this level (duration signal)."
+        },
+        "note": { "type": ["string", "null"], "maxLength": 200 }
+      },
+      "description": "Project health signal, separate from status. Yellow/red projects need more direct coaching on hard conversations."
+    },
+    "customer": {
+      "type": "object",
+      "required": ["code", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,10}$",
+          "description": "Short code used in the project id (e.g., ACME, STOWLINE)."
+        },
+        "name": {
+          "type": "string",
+          "description": "Customer's full name."
+        },
+        "industry": {
+          "type": ["string", "null"],
+          "description": "Optional. Context for the coach (e.g., 'healthcare', 'fintech', 'public sector')."
+        }
+      }
+    },
+    "stakeholders": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Key people across customer, vendor, and internal sides. The coach uses this to recognize attendees in meeting-cards and notice patterns (e.g., 'the sponsor has not been in any of the last four meetings'). When contact_id is set, the contact-card is the authoritative source — name/role here are convenience copies.",
+      "items": {
+        "type": "object",
+        "required": ["name", "role", "party"],
+        "additionalProperties": false,
+        "properties": {
+          "contact_id": {
+            "type": ["string", "null"],
+            "pattern": "^CONTACT-[A-Z]{2,10}-[a-z0-9-]+$",
+            "description": "Optional reference to a contact-card. If set, the contact-card is the canonical record; if null, this stakeholder lives only on the project-card."
+          },
+          "name": { "type": "string" },
+          "role": {
+            "type": "string",
+            "description": "Role on the project, e.g., 'project sponsor', 'tech lead', 'vendor PM', 'customer PMO'."
+          },
+          "party": {
+            "type": "string",
+            "enum": ["customer", "vendor", "internal", "third-party"]
+          },
+          "decision_authority": {
+            "type": ["string", "null"],
+            "enum": ["decision-maker", "approver", "consulted", "informed", null],
+            "description": "Optional RACI-style hint. Helps the coach notice when decisions are being made without the right people in the room."
+          }
+        }
+      }
+    },
+    "timeline": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "start_date": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "target_date": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Project completion target."
+        },
+        "go_live_planned": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Production go-live date (distinct from target_date)."
+        },
+        "actual_end": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+      },
+      "description": "Optional. The coach uses this to gauge time-pressure context — deadline-pressured meetings facilitate differently than open-ended ones."
+    },
+    "risks": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Short list of top project risks. The coach uses these to recognize when a meeting is dancing around the elephant.",
+      "items": {
+        "type": "object",
+        "required": ["description"],
+        "additionalProperties": false,
+        "properties": {
+          "description": { "type": "string" },
+          "mitigation": { "type": ["string", "null"] },
+          "raised": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        }
+      }
+    },
+    "meetings_glob": {
+      "type": ["string", "null"],
+      "description": "Optional glob pattern to find meeting-cards for this project, e.g., 'meetings/MTG-ACME-CLOUD-*.json'."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "enum": ["execution", "golive", "aftercare", "done"] }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["success_criteria"],
+        "properties": {
+          "success_criteria": { "type": "array", "minItems": 1 }
+        }
+      }
+    }
+  ]
+}

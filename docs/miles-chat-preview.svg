@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Preview of a Miles coaching session: user pastes a vendor sync transcript; Miles surfaces a growth moment and ends with a reflection question.">
+  <!-- Page background -->
+  <rect width="800" height="540" fill="#f5f5f5"/>
+
+  <!-- Chat window -->
+  <rect x="20" y="20" width="760" height="500" rx="14" fill="#ffffff" stroke="#e1e1e1" stroke-width="1"/>
+
+  <!-- Title bar background -->
+  <rect x="20" y="20" width="760" height="44" rx="14" fill="#fafafa"/>
+  <rect x="20" y="44" width="760" height="20" fill="#fafafa"/>
+  <line x1="20" y1="64" x2="780" y2="64" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- Traffic lights -->
+  <circle cx="42" cy="42" r="6" fill="#ff5f57"/>
+  <circle cx="62" cy="42" r="6" fill="#febc2e"/>
+  <circle cx="82" cy="42" r="6" fill="#28c840"/>
+
+  <!-- Title -->
+  <text x="400" y="46" text-anchor="middle" fill="#999" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Meeting Coach — Miles</text>
+
+  <!-- YOU label -->
+  <text x="60" y="104" fill="#888" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">YOU</text>
+
+  <!-- User bubble -->
+  <rect x="60" y="118" width="640" height="46" rx="10" fill="#eeeeee"/>
+  <text x="80" y="146" fill="#1a1a1a" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14">Just finished a vendor sync. I wanted to hold the line on no new scope.</text>
+
+  <!-- MILES label -->
+  <text x="60" y="206" fill="#c87830" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">MILES</text>
+
+  <!-- Miles bubble -->
+  <rect x="60" y="220" width="680" height="270" rx="10" fill="#fafafa" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- "Growth moment" label inside Miles bubble -->
+  <text x="80" y="250" fill="#888" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" font-style="italic" letter-spacing="0.5">— GROWTH MOMENT —</text>
+
+  <!-- Observation -->
+  <text x="80" y="285" fill="#333" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5">When David started to respond — <tspan font-style="italic">"Yeah, actually I —"</tspan> — you stopped him</text>
+  <text x="80" y="307" fill="#333" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5">mid-sentence. In your intent you wrote that you wanted a clean line.</text>
+  <text x="80" y="329" fill="#333" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5">In the moment, the line felt threatened by him agreeing with the vendor.</text>
+
+  <!-- Separator -->
+  <line x1="80" y1="365" x2="720" y2="365" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- Reflection question -->
+  <text x="80" y="397" fill="#1a1a1a" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">What did you think David was about to say?</text>
+  <text x="80" y="423" fill="#1a1a1a" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">And what would have happened to your line</text>
+  <text x="80" y="449" fill="#1a1a1a" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">on scope if he'd finished the sentence?</text>
+
+  <!-- Footer hint -->
+  <text x="80" y="478" fill="#bbb" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-style="italic">Never "next time, do X." Always a question you have to think to answer.</text>
+
+  <!-- Caption (outside the chat window, bottom) -->
+  <text x="400" y="525" text-anchor="middle" fill="#888" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12">One moment from a Miles coaching session — see the full DEMO →</text>
+</svg>

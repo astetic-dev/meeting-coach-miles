@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meeting-coach.local/contact-card/v1.json",
+  "title": "Contact Card v1",
+  "description": "One JSON per person who appears across the user's meetings. Centrally stored in <workspace>/contacts/. Project-cards and meeting-cards reference contacts by id, so a single role change or departure is updated once. The coach uses contact-cards to recognize attendees across meetings, notice attendance patterns (sponsor absence, vendor PM swap), and remember behavioral observations the user has logged previously.",
+  "type": "object",
+  "required": ["schema_version", "id", "name", "organization", "active"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^CONTACT-[A-Z]{2,10}-[a-z0-9-]+$",
+      "description": "Format: CONTACT-{org_code}-{name-slug}. Slug = lowercase, dashes, no diacritics. Examples: CONTACT-ACME-mark-thompson, CONTACT-STOWLINE-jasmine-ali."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Full name (given + family)."
+    },
+    "organization": {
+      "type": "object",
+      "required": ["code", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Short org code used in the contact id. Free-text — user defines their own vocabulary (e.g., ACME, STOWLINE, INTERNAL)."
+        },
+        "name": { "type": "string" }
+      }
+    },
+    "role": {
+      "type": ["string", "null"],
+      "description": "Free-text role description, e.g., 'Operations Director', 'Warehouse Manager', 'Vendor Project Manager'."
+    },
+    "party_default": {
+      "type": ["string", "null"],
+      "enum": ["customer", "vendor", "internal", "third-party", null],
+      "description": "Default side at the table for this person. Can be overridden per meeting if the same person plays a different role in another context."
+    },
+    "active": {
+      "type": "boolean",
+      "description": "true = still an active contact. false = departed or no longer relevant. Contacts are kept (not deleted) — historical meeting-cards still reference them."
+    },
+    "since": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Date this person first appeared in the user's working context. Optional."
+    },
+    "departed_at": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Departure date. Only relevant when active=false."
+    },
+    "involved_in": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2,10}-[A-Z]{2,7}$"
+      },
+      "description": "Project-card ids this person is or was involved in."
+    },
+    "behavioral_observations": {
+      "type": "array",
+      "maxItems": 10,
+      "description": "Miles' own observed patterns from past meetings, used to contextualize future analysis. Strictly BEHAVIORAL (what happens, anchored to a meeting), not CHARACTEROLOGICAL (who they 'are'). Example good: 'goes quiet when timelines are challenged'. Example bad: 'is conflict-averse'. For your own characterological notes about this person, use the `notes` field below.",
+      "items": {
+        "type": "object",
+        "required": ["observation"],
+        "additionalProperties": false,
+        "properties": {
+          "observation": { "type": "string" },
+          "first_observed": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "source_meeting_id": {
+            "type": ["string", "null"],
+            "pattern": "^MTG-[A-Z]{2,10}-[A-Z]{2,7}-\\d{4}-\\d{2}-\\d{2}-\\d{2}$"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "maxLength": 1000,
+      "description": "Your own working notes about this person. Free-form — characterological observations are OK here ('very dominant in negotiations', 'fundamentally distrustful of vendors'). This is your scratchpad, not Miles' output language. Miles reads it for context and translates it into anchored behavioral observations in his own output; he never echoes your label back."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional free-text tags for grouping (e.g., 'decision-maker', 'remote', 'champion')."
+    }
+  }
+}

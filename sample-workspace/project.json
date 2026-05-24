@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "ACME-WMS",
+  "title": "Acme Logistics — Warehouse Management System replacement",
+  "purpose": "Replace Acme's 15-year-old in-house WMS with Stowline (SaaS) before the November peak season. The old system can no longer scale with Acme's volume growth and blocks the company's commitment to next-day fulfilment in three new regions.",
+  "scope_summary": {
+    "in_scope": [
+      "Stowline core WMS modules (receiving, putaway, picking, packing, shipping)",
+      "Migration of three live warehouses (Rotterdam, Antwerp, Düsseldorf)",
+      "Integration with Acme's existing TMS and ERP",
+      "Floor-staff training in three languages",
+      "Cutover plan and rollback procedure"
+    ],
+    "out_of_scope": [
+      "Yard management (deferred to phase 2)",
+      "Predictive analytics modules (vendor upsell, declined)",
+      "Hardware refresh for handheld scanners",
+      "Changes to the carrier-API layer"
+    ]
+  },
+  "success_criteria": [
+    "Go-live on October 1, 2026, on all three warehouses",
+    "Pick accuracy ≥ 99.5% within four weeks of go-live",
+    "No more than 4 hours total downtime during cutover weekend",
+    "Floor staff Net Promoter Score for the new system ≥ +20 at 8 weeks"
+  ],
+  "status": "execution",
+  "health": {
+    "level": "yellow",
+    "since": "2026-04-28",
+    "note": "Vendor is two sprints behind on integration work; sponsor is signaling impatience."
+  },
+  "customer": {
+    "code": "ACME",
+    "name": "Acme Logistics B.V.",
+    "industry": "Logistics / supply chain"
+  },
+  "stakeholders": [
+    {
+      "contact_id": "CONTACT-ACME-mark-thompson",
+      "name": "Mark Thompson",
+      "role": "Operations Director (project sponsor)",
+      "party": "customer",
+      "decision_authority": "decision-maker"
+    },
+    {
+      "contact_id": "CONTACT-ACME-priya-natarajan",
+      "name": "Priya Natarajan",
+      "role": "Customer PMO / day-to-day project lead",
+      "party": "customer",
+      "decision_authority": "approver"
+    },
+    {
+      "contact_id": "CONTACT-ACME-david-okonkwo",
+      "name": "David Okonkwo",
+      "role": "Warehouse Manager Rotterdam (end-user lead)",
+      "party": "customer",
+      "decision_authority": "consulted"
+    },
+    {
+      "contact_id": "CONTACT-STOWLINE-jasmine-ali",
+      "name": "Jasmine Ali",
+      "role": "Stowline Vendor Project Manager",
+      "party": "vendor",
+      "decision_authority": "consulted"
+    },
+    {
+      "contact_id": "CONTACT-INTERNAL-sarah-chen",
+      "name": "Sarah Chen",
+      "role": "External Project Manager (facilitator)",
+      "party": "internal",
+      "decision_authority": "consulted"
+    }
+  ],
+  "timeline": {
+    "start_date": "2026-02-15",
+    "target_date": "2026-11-30",
+    "go_live_planned": "2026-10-01",
+    "actual_end": null
+  },
+  "risks": [
+    {
+      "description": "Vendor (Stowline) is consistently behind on integration sprints; impacts cutover-window planning.",
+      "mitigation": "Weekly vendor sync with named blockers and named owners.",
+      "raised": "2026-04-21"
+    },
+    {
+      "description": "Floor staff in Düsseldorf are skeptical of any system change after the failed 2023 rollout attempt.",
+      "mitigation": "Earlier hands-on training; David Okonkwo to identify Düsseldorf champion.",
+      "raised": "2026-03-10"
+    },
+    {
+      "description": "Sponsor wants to compress the cutover into one weekend to avoid peak-season risk; team believes a phased cutover is safer.",
+      "mitigation": "Open — decision pending at next steering.",
+      "raised": "2026-05-10"
+    }
+  ],
+  "meetings_glob": "meetings/MTG-ACME-WMS-*.json"
+}
